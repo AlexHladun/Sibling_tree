@@ -2,15 +2,15 @@
 
 const tree = document.getElementById('tree');
 tree.addEventListener('click', siblingTree);
-spanLi();
+spanWrapper();
 
-function spanLi() {
+function spanWrapper() {
   const listLi = document.getElementsByTagName('li');
   for (let i = 0; i < listLi.length; i++) {
-    const li = listLi[i];
-    const span = document.createElement('span');
-    li.insertBefore(span, li.firstChild);
-    span.appendChild(span.nextSibling);
+    const elemLi = listLi[i];
+    const elemSpan = document.createElement('span');
+    elemLi.insertBefore(elemSpan, elemLi.firstChild);
+    elemSpan.appendChild(elemSpan.nextSibling);
   }
 }
 
